@@ -1,4 +1,5 @@
 
+console.log("js linked");
 const PORT = process.env.PORT || 5000;
 
 const { Pool } = require('pg');
@@ -14,12 +15,12 @@ const btn = document.getElementById('testDb');
 
 function insertNecklace(description, length, price){
     console.log('Button clicked');
-    let description = "Test description";
-    let length = 18;
-    let price = 68;
+    description = "Test description";
+    length = 18;
+    price = 68;
 
     try {
-        const client = await pool.connect();
+        const client = pool.connect();
         client.query(`INSERT INTO necklaces (description, length, price) VALUES (${description}, ${length}, ${price})`);
         console.log("Inserted!");
         // const results = { 'results': (result) ? result.rows : null};
