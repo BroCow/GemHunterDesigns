@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Montserrat:wght@100&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -22,6 +24,20 @@
 header {
   padding: 2vw;
   background-color: lightblue;
+  box-shadow: 0px 5px 5px #e7e9eb;
+  margin-bottom: 2vw;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 1vw;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 4vw;
+  text-align: center;
 }
 
 .searchicon {
@@ -30,11 +46,26 @@ header {
 
 /*** HOME PAGE ***/
 .carousel-container {
-  width: 100vw;
+  box-shadow: 0 5px 5px #e7e9eb, 0 -5px 5px #e7e9eb, 5px 0 5px #e7e9eb, -5px 0 5px #e7e9eb;
+  max-width: 80vw;
+  margin: 2vw auto;
 }
 
 .carousel_image {
-  width: 100vw;
+  max-width: 80vw;
+}
+
+.home-info_container {
+  padding: 0 5vw;
+}
+
+.home-info_heading {
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+}
+
+.home-info_span {
+  font-family: "Montserrat", sans-serif;
 }
 
 /*** Footer ***/
@@ -44,6 +75,7 @@ footer {
   width: 100vw;
   padding: 2vw;
   background-color: lightblue;
+  box-shadow: 0px -5px 5px #e7e9eb;
 }
 
 /*# sourceMappingURL=main.css.map */

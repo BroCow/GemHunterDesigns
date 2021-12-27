@@ -2,6 +2,11 @@
 $header-backgroundcolor: rgb(173, 216, 230);
 $carousel_image-maxwidth: 80vw;
 $icon_max-width: 10vw;
+$boxshadow-color: rgb(231,233,235);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Montserrat:wght@100&display=swap');
 
 // Set box-sizing
 *{
@@ -27,7 +32,23 @@ $icon_max-width: 10vw;
 header{
     padding: 2vw;
     background-color: $header-backgroundcolor;
+    box-shadow: 0px 5px 5px $boxshadow-color;
+    margin-bottom: 2vw;
 }
+
+// Title
+h1{
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1vw;
+    text-align: center;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4vw;
+    text-align: center;
+}
+
+
 // Search icon
 .searchicon{
     width: 90%;
@@ -40,13 +61,23 @@ header{
 
 /*** HOME PAGE ***/
 .carousel-container{
-    width: 100vw;
-//     max-width: 80vw;
-//     margin: auto;
+    box-shadow: 0 5px 5px $boxshadow-color, 0 -5px 5px $boxshadow-color, 5px 0 5px $boxshadow-color, -5px 0 5px $boxshadow-color;
+    max-width: 80vw;
+    margin: 2vw auto;
 }
 .carousel_image{
-    width: 100vw;
-    // max-width: $carousel_image-maxwidth;
+    // width: 90vw;
+    max-width: 80vw;
+}
+.home-info_container{
+    padding: 0 5vw;
+}
+.home-info_heading{
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+}
+.home-info_span{
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -57,6 +88,7 @@ footer{
     width: 100vw;
     padding: 2vw;
     background-color: $header-backgroundcolor;
+    box-shadow: 0px -5px 5px $boxshadow-color;
 }
 
 
