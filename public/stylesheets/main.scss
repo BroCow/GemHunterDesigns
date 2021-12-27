@@ -1,9 +1,12 @@
 // Variables
-$menu-icon_stroke-color: black;
-$menu-icon_stroke-width: 5px;
-$view-margin: 2vw;
+$header-backgroundcolor: rgb(173, 216, 230);
 $carousel_image-maxwidth: 80vw;
+$icon_max-width: 10vw;
 
+// Set box-sizing
+*{
+    box-sizing: border-box;
+}
 
 // Flexbox Classes
 .flex{
@@ -16,25 +19,44 @@ $carousel_image-maxwidth: 80vw;
     justify-content: center;
 }
 
-body{
-    margin: $view-margin;
-    background-color: lightblue;
+.icon{
+    max-width: $icon_max-width;
 }
 
-
-// Header
-.ham-menu{
-    stroke: $menu-icon_stroke-color;
-    stroke-width: $menu-icon_stroke-width;
+/*** Header ***/
+header{
+    padding: 2vw;
+    background-color: $header-backgroundcolor;
 }
+// Search icon
+.searchicon{
+    width: 90%;
+    // max-width: 10vw;
+}
+//  Menu icon
+// .menuicon{
+//     max-width: 10vw;
+// }
 
 /*** HOME PAGE ***/
 .carousel-container{
-    max-width: 80vw;
-    margin: auto;
+    width: 100vw;
+//     max-width: 80vw;
+//     margin: auto;
 }
 .carousel_image{
-    max-width: $carousel_image-maxwidth;
+    width: 100vw;
+    // max-width: $carousel_image-maxwidth;
+}
+
+
+/*** Footer ***/
+footer{
+    position: fixed;
+    bottom: 0vh;
+    width: 100vw;
+    padding: 2vw;
+    background-color: $header-backgroundcolor;
 }
 
 

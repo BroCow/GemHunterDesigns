@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .flex {
   display: flex;
 }
@@ -10,24 +14,36 @@
   justify-content: center;
 }
 
-body {
-  margin: 2vw;
+.icon {
+  max-width: 10vw;
+}
+
+/*** Header ***/
+header {
+  padding: 2vw;
   background-color: lightblue;
 }
 
-.ham-menu {
-  stroke: black;
-  stroke-width: 5px;
+.searchicon {
+  width: 90%;
 }
 
 /*** HOME PAGE ***/
 .carousel-container {
-  max-width: 80vw;
-  margin: auto;
+  width: 100vw;
 }
 
 .carousel_image {
-  max-width: 80vw;
+  width: 100vw;
+}
+
+/*** Footer ***/
+footer {
+  position: fixed;
+  bottom: 0vh;
+  width: 100vw;
+  padding: 2vw;
+  background-color: lightblue;
 }
 
 /*# sourceMappingURL=main.css.map */
