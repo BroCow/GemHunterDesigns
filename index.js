@@ -18,7 +18,16 @@ express()
   .set('view engine', 'ejs')
   // .get('/', (req, res) => res.render('pages/index'))
   .get('/', (req, res) => res.render('pages/home'))
-  .get('/addItems', (req, res) => res.render('pages/addItems'))
+  .get('/addItems', async (req, res) => {
+    try {
+      const client = await pool.connect();
+      res.render('pages/addItems');
+      console.log('Connected!');
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+  })
 
 
 
