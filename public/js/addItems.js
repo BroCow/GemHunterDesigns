@@ -1,13 +1,14 @@
 
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-// const { Pool } = require('pg');
-// const pool = new Pool({
-//   connectionString: process.env.DATABASE_URL,
-//   ssl: {
-//     rejectUnauthorized: false
-//   }
-// });
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
 
 const btn = document.getElementById('testDb');
 
@@ -16,10 +17,17 @@ function insertNecklace(description, length, price){
     let description = "Test description";
     let length = 18;
     let price = 68;
-    let sql = `INSERT INTO necklaces (description, length, price) VALUES (${description}, ${length}, ${price})`;
-    client.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("1 record inserted");
-    });
+
+    try {
+        const client = await pool.connect();
+        client.query(`INSERT INTO necklaces (description, length, price) VALUES (${description}, ${length}, ${price})`);
+        console.log("Inserted!");
+        // const results = { 'results': (result) ? result.rows : null};
+        // res.render('pages/db', results );
+        client.release();
+      } catch (err) {
+        console.error(err);
+        res.send("Error " + err);
+      }
 }
 btn.addEventListener('click', insertNecklace);
