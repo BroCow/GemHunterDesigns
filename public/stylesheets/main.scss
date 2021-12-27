@@ -1,7 +1,7 @@
 // Variables
 $header-backgroundcolor: rgb(173, 216, 230);
 $carousel_image-maxwidth: 80vw;
-$icon_max-width: 10vw;
+$icon_max-width: 8vw;
 $boxshadow-color: rgb(231,233,235);
 
 // Fonts
@@ -34,9 +34,16 @@ header{
     background-color: $header-backgroundcolor;
     box-shadow: 0px 5px 5px $boxshadow-color;
     margin-bottom: 2vw;
+    position: fixed;
+    top: 0vh;
+    opacity: .9;
+    width: 100vw;
 }
 
 // Title
+.title-container{
+    padding-top: 8vh;
+}
 h1{
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 1vw;
@@ -63,11 +70,13 @@ h3{
 .carousel-container{
     box-shadow: 0 5px 5px $boxshadow-color, 0 -5px 5px $boxshadow-color, 5px 0 5px $boxshadow-color, -5px 0 5px $boxshadow-color;
     max-width: 80vw;
+    max-height: 60vh;
     margin: 2vw auto;
 }
 .carousel_image{
-    // width: 90vw;
+    // width: 100%;
     max-width: 80vw;
+    max-height: 60vh;
 }
 .home-info_container{
     padding: 0 5vw 60px 5vw;
@@ -89,6 +98,7 @@ footer{
     padding: 2vw;
     background-color: $header-backgroundcolor;
     box-shadow: 0px -5px 5px $boxshadow-color;
+    opacity: .9;
 }
 
 
