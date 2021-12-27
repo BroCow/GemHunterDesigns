@@ -1,0 +1,40 @@
+// Variables
+$menu-icon_stroke-color: black;
+$menu-icon_stroke-width: 5px;
+$view-margin: 2vw;
+$carousel_image-maxwidth: 80vw;
+
+
+// Flexbox Classes
+.flex{
+    display: flex;
+}
+.flex_space-between{
+    justify-content: space-between;
+}
+.flex_center{
+    justify-content: center;
+}
+
+body{
+    margin: $view-margin;
+    background-color: lightblue;
+}
+
+
+// Header
+.ham-menu{
+    stroke: $menu-icon_stroke-color;
+    stroke-width: $menu-icon_stroke-width;
+}
+
+/*** HOME PAGE ***/
+.carousel-container{
+    max-width: 80vw;
+    margin: auto;
+}
+.carousel_image{
+    max-width: $carousel_image-maxwidth;
+}
+
+

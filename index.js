@@ -16,7 +16,8 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
+  // .get('/', (req, res) => res.render('pages/index'))
+  .get('/', (req, res) => res.render('pages/home'))
   // Get request to connect to Heroku database
   .get('/db', async (req, res) => {
     try {
