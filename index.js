@@ -37,14 +37,15 @@ const app = express();
 
   // .get('/', (req, res) => res.render('pages/index'))
   app.get('/', (req, res) => res.render('pages/home'));
-  app.get('/necklaces', product_controller.getNecklacesList);
+  // app.get('/necklaces', product_controller.getNecklacesList);
 
   // Get request to connect to Heroku database
-  app.get('/db', async (req, res) => {
+  app.get('/necklaces', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM necklaces');
       const results = { 'results': (result) ? result.rows : null};
+      console.log(results);
       res.render('pages/necklaces', results );
       client.release();
     } catch (err) {
