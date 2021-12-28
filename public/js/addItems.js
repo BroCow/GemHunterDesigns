@@ -1,6 +1,6 @@
 console.log('js linked');
 
-// const express = require('express');
+const express = require('express');
 
 const PORT = process.env.PORT || 5000;
 const { Pool } = require('pg');
