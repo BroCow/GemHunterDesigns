@@ -60,7 +60,12 @@ const app = express();
   app.get('/insertNecklace', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query("INSERT INTO necklaces VALUES (2, 'second description', 18, 50");
+      // let id = 2;
+      // let desc = 'second description';
+      // let length = 18;
+      // let price = 50;
+      const result = await client.query("INSERT INTO necklaces VALUES (2, 'second description', 18, 50)");
+      // const result = await client.query("INSERT INTO necklaces VALUES (2, 'second description', 18, 50");
       // const results = { 'results': (result) ? result.rows : null};
       // console.log('Insert log');
       // const response = 'Insert completed';
