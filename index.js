@@ -61,9 +61,9 @@ const app = express();
     try {
       const client = await pool.connect();
       let id = 3;
-      let desc = document.getElementById('description');
-      let length = document.getElementById('length');
-      let price = document.getElementById('price');
+      let desc = document.getElementById('description').value;
+      let length = document.getElementById('length').value;
+      let price = document.getElementById('price').value;
       const result = await client.query(`INSERT INTO necklaces VALUES (${id}, ${desc}, ${length}, ${price})`);
       // const result = await client.query("INSERT INTO necklaces VALUES (2, 'second description', 18, 50");
       // const results = { 'results': (result) ? result.rows : null};
