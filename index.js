@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 5000;
 
 //  Require controllers
 const product_controller = require('./controllers/product_controller');
+const addItems_controller = require('./public/js/addItems');
 
 const { Pool } = require('pg');
 const connectionString = process.env.DATABASE_URL || "postgres://ilnhpatpqlcdtw:ff9228630d574a88bbebe01ad05d3d5bfb7810ea7d2bba09668ab7ba6980794a@ec2-50-19-160-40.compute-1.amazonaws.com:5432/d40kt7nl9qi54?ssl=true";
@@ -60,11 +61,13 @@ const app = express();
   app.get('/insertNecklace', async (req, res) => {
     try {
       const client = await pool.connect();
-      let id = 3;
-      let desc = document.getElementById('description').value;
-      let length = document.getElementById('length').value;
-      let price = document.getElementById('price').value;
-      const result = await client.query(`INSERT INTO necklaces VALUES (${id}, ${desc}, ${length}, ${price})`);
+
+      let insertData = addItems_controller.insertData();
+      let desc = insertData[0];
+      let length = insertData[1];
+      let price = insertData[2];
+
+      const result = await client.query(`INSERT INTO necklaces (description, length, price) VALUES (${desc}, ${length}, ${price})`);
       // const result = await client.query("INSERT INTO necklaces VALUES (2, 'second description', 18, 50");
       // const results = { 'results': (result) ? result.rows : null};
       // console.log('Insert log');
