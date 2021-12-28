@@ -9,7 +9,7 @@ console.log(homeInfoItems);
 
 function appGet_Necklaces(){
     console.log("Calling app.get('/necklaces') from index");
-    $.get('/necklaces', (req, res) => res.render('pages/necklaces'));
+    window.location.href = 'https://fast-bayou-70960.herokuapp.com/necklaces';
     
 
     // let necklaces = necklaceLink.innerHTML;
