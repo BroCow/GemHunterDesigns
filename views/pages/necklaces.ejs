@@ -10,12 +10,13 @@
     <div id="allNecklaces">
         <ul>
             <% results.forEach(function(r) { %>
-                <li><%= r.id %> - <%= r.price %></li>
+                <li><%= r.description %></li>
+                <li><%= r.price %> - <%= r.length %></li>
             <% }); %>
         </ul>
     </div>
     
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>

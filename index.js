@@ -54,20 +54,7 @@ const app = express();
     }
   })
 
-  
-
-
-  // .get('/addItems', async (req, res) => {
-  //   try {
-  //     const client = await pool.connect();
-  //     res.render('pages/addItems');
-  //     console.log('Connected!');
-  //   } catch (err) {
-  //     console.error(err);
-  //     res.send("Error " + err);
-  //   }
-  // })
-
+  app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
 
@@ -85,7 +72,7 @@ const app = express();
   //     res.send("Error " + err);
   //   }
   // })
-  app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  
   
 
 
