@@ -7,10 +7,14 @@
     <title>GemHunter Designs - Necklaces</title>
 </head>
 <body>
-    <div id="allNecklaces"></div>
-    <div>
-        <ul id="ulClasses"></ul>
+    <div id="allNecklaces">
+        <ul>
+            <% results.forEach(function(r) { %>
+                <li><%= r.id %> - <%= r.name %></li>
+            <% }); %>
+        </ul>
     </div>
+    
 
     <script src="main.js"></script>
 </body>

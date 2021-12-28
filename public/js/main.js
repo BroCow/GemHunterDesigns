@@ -1,23 +1,28 @@
 
-console.log("js linked");
 
-const necklaceLink = document.getElementById('necklaces');
 
-function showNecklaces(){
-    console.log('Showing necklaces...');
+// Get item links from home page info section by classname to create array
+const homeInfoItems = document.getElementsByClassName('home-info_item');
+console.log(homeInfoItems);
 
-    let necklaces = $('#necklaces').val();
-    console.log('Necklaces: ' + necklaces);
 
-    $.get('/necklaces', function(data){
-        console.log('Back from server with: ');
-        console.log(data);
 
-        $('#allNecklaces').append('<h3>Necklaces Currently Available</h3>');
-        for(let i=0; i<data.necklaces.length; i++){
-            let necklaces = data.necklaces[i];
-            $('#ulClasses').append('<li>' + necklaces.description + '</li>');
-        }
-    })
+function appGet_Necklaces(){
+    console.log("Calling app.get('/necklaces') from index");
+    $.get('/necklaces', (req, res) => res.render('pages/necklaces'));
+    
+
+    // let necklaces = necklaceLink.innerHTML;
+    // console.log('Necklaces: ' + necklaces);
+    // $.get('/pages/necklaces', function(data){
+    //     console.log('Back from server with: ');
+    //     console.log(data);
+
+        // $('#allNecklaces').append('<h3>Necklaces Currently Available</h3>');
+        // for(let i=0; i<data.necklaces.length; i++){
+        //     let necklaces = data.necklaces[i];
+        //     $('#ulClasses').append('<li>' + necklaces.description + '</li>');
+        // }
+    // })
 }
-necklaceLink.addEventListener('click', showNecklaces);
+homeInfoItems[1].addEventListener('click', appGet_Necklaces);
