@@ -57,7 +57,7 @@ const app = express();
   // Make it possible to navigate to addItems page in browser
   app.get('/addItems', (req, res) => res.render('pages/addItems'));
   // Called by button on addItems page for necklaces
-  app.post('/insertNecklace', async (req, res) => {
+  app.get('/insertNecklace', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query("INSERT INTO necklaces VALUES (2, 'second description', 18, 50");
