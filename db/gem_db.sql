@@ -1,12 +1,14 @@
 CREATE TABLE necklaces (
-    id integer serial PRIMARY KEY, 
-    desc TEXT NOT NULL,
+    id serial PRIMARY KEY, 
+    description TEXT NOT NULL,
     length INTEGER,
-    price INTEGER
+    price INTEGER NOT NULL
 );
 
-INSERT INTO test_table
+INSERT INTO necklaces
 VALUES (
     1,
-    'hello database'
+    'first description',
+    18,
+    68
 );
