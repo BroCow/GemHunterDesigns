@@ -38,14 +38,14 @@ const app = express();
   // .get('/', (req, res) => res.render('pages/index'))
   app.get('/', (req, res) => res.render('pages/home'));
   // app.get('/necklaces', product_controller.getNecklacesList);
-
-  // Get request to connect to Heroku database
+  
+  // Get request to connect to Heroku database, select all from necklaces table, render results on /necklaces
   app.get('/necklaces', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM necklaces');
       const results = { 'results': (result) ? result.rows : null};
-      console.log(results);
+     
       res.render('pages/necklaces', results );
       client.release();
     } catch (err) {
@@ -53,6 +53,25 @@ const app = express();
       res.send("Error " + err);
     }
   })
+
+  // Make it possible to navigate to addItems page in browser
+  app.get('/addItems', (req, res) => res.render('pages/addItems'));
+  // Called by button on addItems page for necklaces
+  app.post('/insertNecklace', async (req, res) => {
+    try {
+      const client = await pool.connect();
+      const result = await client.query("INSERT INTO necklaces VALUES (2, 'second description', 18, 50");
+      // const results = { 'results': (result) ? result.rows : null};
+      // console.log('Insert log');
+      // const response = 'Insert completed';
+      res.render('pages/itemAdded');
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+  })
+    
 
   app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 

@@ -13,13 +13,25 @@
         <h3>DESIGNS</h3>
     </div>
 
-    <button id="testDb">Insert</button>
+    <form action="">
+        <label for="description">Product Description</label>
+        <br>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Enter a short description here..."></textarea>
+        <br>
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price">
+        <br>
+        <label for="length">Length</label>
+        <input type="number" id="length" name="length">
+    </form>
+
+    <button id="insertNecklace">Insert Necklace</button>
 
 
     <footer>
         <%- include ("../partials/footer.ejs") %>
     </footer>
 
-    <!-- <script src="/js/addItems.js"></script> -->
+    <script src="/js/addItems.js"></script>
 </body>
 </html>

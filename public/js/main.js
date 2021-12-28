@@ -1,10 +1,8 @@
-
-
+console.log('js linked');
 
 // Get item links from home page info section by classname to create array
 const homeInfoItems = document.getElementsByClassName('home-info_item');
 console.log(homeInfoItems);
-
 
 
 function appGet_Necklaces(){
@@ -26,3 +24,5 @@ function appGet_Necklaces(){
     // })
 }
 homeInfoItems[1].addEventListener('click', appGet_Necklaces);
+
+
