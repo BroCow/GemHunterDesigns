@@ -15,7 +15,7 @@
 
     <div id="allNecklaces">
         <ul>
-            <% results.forEach(function(r) { %>
+            <% result.forEach(function(r) { %>
                 <li><%= r.description %></li>
                 <li><%= r.price %> - <%= r.length %></li>
             <% }); %>
@@ -25,7 +25,7 @@
     <footer>
         <%- include ("../partials/footer.ejs") %>
     </footer>
-    
+
     <!-- <script src="main.js"></script> -->
 </body>
 </html>
