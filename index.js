@@ -9,8 +9,8 @@ const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 //  Require controllers & modules
-const product_controller = require('./controllers/product_controller');
-const addItems_controller = require('./public/js/addItems');
+// const product_controller = require('./controllers/product_controller');
+// const addItems_controller = require('./public/js/addItems');
 // Router modules
 const product = require('./routers/product');
 const manage = require('./routers/manage');
