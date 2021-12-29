@@ -4,8 +4,9 @@ const express = require('express');
 const router = express.Router();
 
 // Manage Necklaces page
-router.get('/necklaces', function(req, res){
-    res.send('Add, delete, and modify necklaces here...');
+router.get('/necklaces', function (req, res){
+    // res.send('Add, delete, and modify necklaces here...');
+    res.render('pages/addItems');
 });
 
 // Manage Bracelets page

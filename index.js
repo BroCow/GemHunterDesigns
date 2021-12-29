@@ -2,7 +2,7 @@
 // Require the express module
 const express = require('express');
 // Creat app with express
-const app = express();
+const app = express(); // exported as module for use elsewhere
 
 const { body,validationResult } = require('express-validator');
 const path = require('path');
@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 5000;
 const product_controller = require('./controllers/product_controller');
 const addItems_controller = require('./public/js/addItems');
 // Router modules
-const product = require('./public/js/product');
-const manage = require('./public/js/manage');
+const product = require('./routers/product');
+const manage = require('./routers/manage');
 
 
 // Database connection
@@ -25,6 +25,10 @@ const pool = new Pool({connectionString: connectionString,
   }
 });
 
+// Set express stuff
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 // Use express stuff
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true}));
@@ -33,30 +37,28 @@ app.use(express.json());
 app.use('/product', product);
 app.use('/manage', manage);
 
-// Set express stuff
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+
 
 // Direct to home page
 app.get('/', (req, res) => res.render('pages/home'));
 
 // Get request to connect to Heroku database, select all from necklaces table, render results on /necklaces
-app.get('/necklaces', async (req, res) => {
-  try {
-    const client = await pool.connect();
-    const result = await client.query('SELECT * FROM necklaces');
-    const results = { 'results': (result) ? result.rows : null};
+// app.get('/necklaces', async (req, res) => {
+//   try {
+//     const client = await pool.connect();
+//     const result = await client.query('SELECT * FROM necklaces');
+//     const results = { 'results': (result) ? result.rows : null};
     
-    res.render('pages/necklaces', results );
-    client.release();
-  } catch (err) {
-    console.error(err);
-    res.send("Error " + err);
-  }
-})
+//     res.render('pages/necklaces', results );
+//     client.release();
+//   } catch (err) {
+//     console.error(err);
+//     res.send("Error " + err);
+//   }
+// })
 
 // Make it possible to navigate to addItems page in browser
-app.get('/addItems', (req, res) => res.render('pages/addItems'));
+// app.get('/addItems', (req, res) => res.render('pages/addItems'));
 // Called by button on addItems page for necklaces
 app.get('/insertNecklace', async (req, res) => {
   try {
@@ -78,24 +80,8 @@ app.get('/insertNecklace', async (req, res) => {
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-
-
-  /*** Template DB Connection ***/
-  // Get request to connect to Heroku database
-  // app.get('/db', async (req, res) => {
-  //   try {
-  //     const client = await pool.connect();
-  //     const result = await client.query('SELECT * FROM necklaces');
-  //     const results = { 'results': (result) ? result.rows : null};
-  //     res.render('pages/db', results );
-  //     client.release();
-  //   } catch (err) {
-  //     console.error(err);
-  //     res.send("Error " + err);
-  //   }
-  // })
   
   
-
+module.exports = app;
 
   
