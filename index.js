@@ -4,7 +4,7 @@ const express = require('express');
 // Creat app with express
 const app = express(); // exported as module for use elsewhere
 
-const { body,validationResult } = require('express-validator');
+// const { body,validationResult } = require('express-validator');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
