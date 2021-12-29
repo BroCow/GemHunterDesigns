@@ -8,10 +8,7 @@ const app = express(); // exported as module for use elsewhere
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
-//  Require controllers & modules
-// const product_controller = require('./controllers/product_controller');
-// const addItems_controller = require('./public/js/addItems');
-// Router modules
+//  Require routers
 const product = require('./routers/product');
 const manage = require('./routers/manage');
 
