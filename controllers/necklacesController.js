@@ -7,7 +7,7 @@ function control_getAllNecklaces(req, res){
     console.log("Getting all necklaces...");
     necklaces_model.model_getAllNecklaces(function(error, result){
         // res.json(result);
-        res.render('views/pages/necklaces', result);
+        res.render('views/pages/necklaces');
     });
 }
 
