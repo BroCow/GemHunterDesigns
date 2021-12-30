@@ -95,7 +95,7 @@ footer {
 }
 
 .display-product_left .display-product_right {
-  width: 35vw;
+  width: 44vw;
   box-shadow: 0 5px 5px lightblue, 0 -5px 5px lightblue, 5px 0 5px lightblue, -5px 0 5px lightblue;
 }
 
@@ -104,6 +104,7 @@ footer {
 }
 
 .display-product_image {
+  width: 30vw;
   box-shadow: 0 5px 5px #e7e9eb, 0 -5px 5px #e7e9eb, 5px 0 5px #e7e9eb, -5px 0 5px #e7e9eb;
 }
 
