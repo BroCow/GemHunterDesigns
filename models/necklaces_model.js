@@ -19,10 +19,11 @@ function model_getAllNecklaces(callback){
             console.log("Back from database with: ");
             console.log(db_result);
 
-            let result = {necklaces:db_result.rows};
-            console.log("Result variable is: " + result);
+            const results = { 'results': (db_result) ? db_result.rows : null};
+            // let result = {necklaces:db_result.rows};
+            // console.log("Result variable is: " + result);
 
-            callback(null, result);
+            callback(null, results);
         }
     })
 
