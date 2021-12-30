@@ -95,6 +95,7 @@ footer {
 }
 
 .display-product_left .display-product_right {
+  border: 1px solid red;
   width: 44vw;
   box-shadow: 0 5px 5px lightblue, 0 -5px 5px lightblue, 5px 0 5px lightblue, -5px 0 5px lightblue;
 }

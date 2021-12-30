@@ -101,7 +101,7 @@ footer{
 }
 
 .display-product_left .display-product_right{
-    // padding: 2vw;
+    border: 1px solid red;
     width: 44vw;
     box-shadow: 0 5px 5px $header-backgroundcolor, 0 -5px 5px $header-backgroundcolor, 5px 0 5px $header-backgroundcolor, -5px 0 5px $header-backgroundcolor; 
 }
@@ -111,4 +111,7 @@ footer{
 .display-product_image{
     width: 44vw;
     box-shadow: 0 5px 5px $boxshadow-color, 0 -5px 5px $boxshadow-color, 5px 0 5px $boxshadow-color, -5px 0 5px $boxshadow-color;
+}
+.display-product_desc{
+    
 }
