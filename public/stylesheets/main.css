@@ -12,6 +12,10 @@
   justify-content: space-between;
 }
 
+.flex_space-around {
+  justify-content: space-around;
+}
+
 .flex_center {
   justify-content: center;
 }
@@ -90,8 +94,8 @@ footer {
   opacity: 0.9;
 }
 
-#testImage {
-  width: 300px;
+.display-product_image {
+  width: 30vw;
 }
 
 /*# sourceMappingURL=main.css.map */
