@@ -17,7 +17,7 @@
         
         <ul>
             <% results.forEach(function(r) { %>
-                <img src="/images/blue-rb.png" alt="necklace" class="display-product_image">
+                <img src="<%= r.image %>" alt="necklace" class="display-product_image">
                 <li><%= r.description %></li>
                 <li><%= r.price %> - <%= r.length %></li>
                 <li><%= r.image %></li>
