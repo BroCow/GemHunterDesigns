@@ -25,4 +25,4 @@ function appGet_Necklaces(){
 }
 homeInfoItems[1].addEventListener('click', appGet_Necklaces);
 
-
+ 
