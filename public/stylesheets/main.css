@@ -94,8 +94,18 @@ footer {
   opacity: 0.9;
 }
 
+.display-product_left .display-product_right {
+  padding: 2vw;
+  box-shadow: 0 5px 5px lightblue, 0 -5px 5px lightblue, 5px 0 5px lightblue, -5px 0 5px lightblue;
+}
+
+.display-product_image-container {
+  text-align: center;
+}
+
 .display-product_image {
   width: 30vw;
+  box-shadow: 0 5px 5px #e7e9eb, 0 -5px 5px #e7e9eb, 5px 0 5px #e7e9eb, -5px 0 5px #e7e9eb;
 }
 
 /*# sourceMappingURL=main.css.map */
