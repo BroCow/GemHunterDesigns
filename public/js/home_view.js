@@ -1,3 +1,7 @@
+// Require the express module
+const express = require('express');
+const app = express();
+
 // const app = require('index.js');
 const router = require('routers/product.js');
 
