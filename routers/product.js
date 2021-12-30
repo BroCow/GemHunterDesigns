@@ -38,10 +38,6 @@ router.get('/necklaces', necklacesController.control_getAllNecklaces);
 
 
 
-
-
-
-
 // Show Bracelets page
 router.get('/bracelets', function(req, res){
     res.send('View available bracelets here...');
