@@ -1,4 +1,4 @@
-const app = require('index.js');
+// const app = require('index.js');
 const router = require('routers/product.js');
 
 const productLinks_array = document.getElementsByClassName('home-info_item');
