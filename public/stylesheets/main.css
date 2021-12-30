@@ -109,4 +109,8 @@ footer {
   box-shadow: 0 5px 5px #e7e9eb, 0 -5px 5px #e7e9eb, 5px 0 5px #e7e9eb, -5px 0 5px #e7e9eb;
 }
 
+.display-product_desc .display-product_pl {
+  width: 44vw;
+}
+
 /*# sourceMappingURL=main.css.map */
