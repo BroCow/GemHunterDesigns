@@ -26,7 +26,6 @@ function getDbNecklaces(callback){
             callback(null, result);
         }
     });
-
 }
 
 
