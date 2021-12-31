@@ -107,6 +107,7 @@ h3 {
   height: 300px;
   max-width: 45vw;
   max-height: 45vw;
+  box-shadow: 0 5px 5px #e7e9eb, 0 -5px 5px #e7e9eb, 5px 0 5px #e7e9eb, -5px 0 5px #e7e9eb;
 }
 
 .product-desc {
