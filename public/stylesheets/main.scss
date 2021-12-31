@@ -96,12 +96,45 @@ h3{
 }
 .home-info_heading{
     font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 0.5vw;
+    letter-spacing: 0.75vw;
     text-align: center;
 }
 .home-info_item{
     font-family: 'Montserrat', sans-serif;
     letter-spacing: .25vw;
+    padding: 0 2vw;
+    box-shadow: $boxshadow-color-settings_card;
+    text-decoration: none;
+    color: inherit;
+    // border-radius: 5px;
+}
+.home-info_item:hover{
+    box-shadow: 0 5px 5px $header-backgroundcolor, 0 -5px 5px $header-backgroundcolor, 5px 0 5px $header-backgroundcolor, -5px 0 5px $header-backgroundcolor;
+    color: inherit;
+}
+.home-info_item:active{
+    box-shadow: 0 5px 5px $header-backgroundcolor, 0 -5px 5px $header-backgroundcolor, 5px 0 5px $header-backgroundcolor, -5px 0 5px $header-backgroundcolor;
+    color: $header-backgroundcolor;
+}
+.border-radius{
+    border: 1px solid red;
+    box-shadow: 0 20px 20px black, 0 -20px 20px black, 20px 0 20px black, -20px 0 20px black;
+    position: relative;
+    // width: 200px;
+    // height: 80px;
+    // background-color: #522d5b; 
+    overflow: hidden;
+    clip-path: polygon(
+        0 20%,
+        20% 0,
+        80% 0,
+        100% 20%,
+        100% 80%,
+        80% 100%,
+        20% 100%,
+        0% 80%,
+        0% 20%
+    );
 }
 
 /*** NECKLACES PAGE ***/
