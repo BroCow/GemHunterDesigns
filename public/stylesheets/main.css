@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/*** Flexbox Classes ***/
 .flex {
   display: flex;
 }
@@ -18,6 +19,10 @@
 
 .flex_center {
   justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .icon {
@@ -81,6 +86,46 @@ h3 {
 
 .home-info_span {
   font-family: "Montserrat", sans-serif;
+}
+
+/*** NECKLACES PAGE ***/
+.product-container {
+  border: 1px solid green;
+  max-width: 100vw;
+}
+
+.product-displayed {
+  margin-bottom: 2vw;
+}
+
+.product-image_container {
+  max-width: 50vw;
+  max-height: 50vw;
+  border: 1px solid red;
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
+  max-width: 45vw;
+  max-height: 45vw;
+  border: 1px solid blue;
+}
+
+.product-desc {
+  border: 1px solid red;
+  padding: 0 2.5vw;
+  max-width: 45vw;
+}
+
+.product-price {
+  border: 1px solid red;
+  padding: 0 2.5vw;
+}
+
+.product-length {
+  border: 1px solid red;
+  padding: 0 2.5vw;
 }
 
 /*** Footer ***/

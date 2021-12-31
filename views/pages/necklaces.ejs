@@ -13,19 +13,69 @@
         <h3>DESIGNS</h3>
     </div>
 
-    <div id="allNecklaces">
-        
+    <!-- <div id="allNecklaces">
         <ul>
-            <% results.forEach(function(r) { %>
-                <img src="<%= r.image %>" alt="necklace" class="display-product_image">
-                <li><%= r.description %></li>
-                <li><%= r.price %> - <%= r.length %></li>
-                <li><%= r.image %></li>
-            <% }); %>
+             results.forEach(function(r) { 
+                <img src=" r.image %>" alt="necklace" class="display-product_image">
+                <li> r.description %></li>
+                <li> r.price %> -  r.length %></li>
+                <li> r.image %></li>
+            }); %>
         </ul>
-    </div>
+    </div> -->
 
-    <div class="flex flex_space-around">
+    
+    <div class="product-container flex flex-wrap flex-space-between">
+
+        <% results.forEach(function(r) { %>
+            <div class="product-displayed">
+                <div class="product-image_container flex flex-center">
+                    <img src="<%= r.image %>" alt="necklace" class="product-image">
+                </div>
+                <div class="product-desc">
+                    <p><%= r.description %></p>
+                </div>
+                <div class="flex">
+                    <div class="product-price"><%= r.price %></div>
+                    <span>-</span>
+                    <div class="product-length"><%= r.length %></div>
+                </div>
+            </div>
+        <% }); %>
+
+    </div>
+    
+        
+        <!-- <div class="product-displayed">
+            <div class="flex flex-center image-container">
+                <div class="image"></div>
+            </div>
+            <div class="desc">
+                <p>This is a description that could sometimes be a little long</p>
+            </div>
+            <div class="flex">
+                <div class="price">50</div>
+                <span>-</span>
+                <div class="length">18</div>
+            </div>
+        </div>
+
+        <div class="product-displayed">
+            <div class="flex flex-center image-container">
+                <div class="image"></div>
+            </div>
+            <div class="desc">
+                <p>This is a description that could sometimes be a little long</p>
+            </div>
+            <div class="flex">
+                <div class="price">50</div>
+                <span>-</span>
+                <div class="length">18</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="flex flex_space-around">
         <div class="display-product_left">
             <div class="display-product_image-container">
                 <img src="/images/blue-rb.png" alt="necklace" class="display-product_image">
@@ -46,7 +96,7 @@
                 <p class="display-product_length">Length:</p>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <footer>
         <%- include ("../partials/footer.ejs") %>
