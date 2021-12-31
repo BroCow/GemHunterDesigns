@@ -1,3 +1,4 @@
+/*** Variables ***/
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Montserrat:wght@100&display=swap");
 * {
@@ -25,8 +26,10 @@
   flex-wrap: wrap;
 }
 
+/*** Icons ***/
 .icon {
-  max-width: 8vw;
+  width: 8vw;
+  max-width: 25px;
 }
 
 /*** Header ***/
@@ -41,6 +44,7 @@ header {
   width: 100vw;
 }
 
+/*** Title ***/
 .title-container {
   padding-top: 8vh;
 }
@@ -56,10 +60,6 @@ h3 {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 4vw;
   text-align: center;
-}
-
-.searchicon {
-  width: 90%;
 }
 
 /*** HOME PAGE ***/

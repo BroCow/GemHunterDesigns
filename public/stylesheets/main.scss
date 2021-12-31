@@ -1,8 +1,20 @@
-// Variables
+/*** Variables ***/
+// Header & Footer
 $header-backgroundcolor: rgb(173, 216, 230);
-$carousel_image-maxwidth: 80vw;
-$icon_max-width: 8vw;
+$header-footer_padding: 2vw;
+// Box Shadows
 $boxshadow-color: rgb(231,233,235);
+$boxshadow-settings_header: 0px 5px 5px;
+$boxshadow-settings_footer: 0px -5px 5px;
+$boxshadow-color-settings_card: 0 5px 5px $boxshadow-color, 0 -5px 5px $boxshadow-color, 5px 0 5px $boxshadow-color, -5px 0 5px $boxshadow-color;
+// Carousel
+$carousel_image-maxwidth: 80vw;
+// Text
+$h1-letter-spacing: 1vw;
+$h3-letter-spacing: 4vw;
+// Icons
+$icon-width: 8vw;
+$icon_max-width: 25px;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
@@ -30,15 +42,17 @@ $boxshadow-color: rgb(231,233,235);
     flex-wrap: wrap;
 }
 
+/*** Icons ***/
 .icon{
+    width: $icon-width;
     max-width: $icon_max-width;
 }
 
 /*** Header ***/
 header{
-    padding: 2vw;
+    padding: $header-footer_padding;
     background-color: $header-backgroundcolor;
-    box-shadow: 0px 5px 5px $boxshadow-color;
+    box-shadow: $boxshadow-settings_header $boxshadow-color;
     margin-bottom: 2vw;
     position: fixed;
     top: 0vh;
@@ -46,7 +60,7 @@ header{
     width: 100vw;
 }
 
-// Title
+/*** Title ***/
 .title-container{
     padding-top: 8vh;
 }
@@ -62,16 +76,9 @@ h3{
     text-align: center;
 }
 
-
-// Search icon
-.searchicon{
-    width: 90%;
-    // max-width: 10vw;
-}
-
 /*** HOME PAGE ***/
 .carousel-container{
-    box-shadow: 0 5px 5px $boxshadow-color, 0 -5px 5px $boxshadow-color, 5px 0 5px $boxshadow-color, -5px 0 5px $boxshadow-color;
+    box-shadow: $boxshadow-color-settings_card;
     max-width: 80vw;
     max-height: 60vh;
     margin: 2vw auto;
@@ -130,9 +137,9 @@ footer{
     position: fixed;
     bottom: 0vh;
     width: 100vw;
-    padding: 2vw;
+    padding: $header-footer_padding;
     background-color: $header-backgroundcolor;
-    box-shadow: 0px -5px 5px $boxshadow-color;
+    box-shadow: $boxshadow-settings_footer $boxshadow-color;
     opacity: .9;
 }
 
