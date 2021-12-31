@@ -2,6 +2,10 @@
 // Header & Footer
 $header-backgroundcolor: rgb(173, 216, 230);
 $header-footer_padding: 2vw;
+$header-footer_opacity: 0.9;
+$header-footer_width: 100vw;
+$header-footer_position: fixed;
+$header-footer_position-value: 0vh;
 // Box Shadows
 $boxshadow-color: rgb(231,233,235);
 $boxshadow-settings_header: 0px 5px 5px;
@@ -54,10 +58,10 @@ header{
     background-color: $header-backgroundcolor;
     box-shadow: $boxshadow-settings_header $boxshadow-color;
     margin-bottom: 2vw;
-    position: fixed;
-    top: 0vh;
-    opacity: .9;
-    width: 100vw;
+    position: $header-footer_position;
+    top: $header-footer_position-value;
+    opacity: $header-footer_opacity;
+    width: $header-footer_width;
 }
 
 /*** Title ***/
@@ -100,7 +104,6 @@ h3{
     letter-spacing: .25vw;
 }
 
-
 /*** NECKLACES PAGE ***/
 .product-container{
     max-width: 100vw;
@@ -120,7 +123,7 @@ h3{
     height: 300px;
     max-width: 45vw;
     max-height: 45vw;
-    box-shadow: 0 5px 5px $boxshadow-color, 0 -5px 5px $boxshadow-color, 5px 0 5px $boxshadow-color, -5px 0 5px $boxshadow-color;
+    box-shadow: $boxshadow-color-settings_card;
 }
 .product-desc{
     padding: 0 2.5vw;
@@ -133,31 +136,13 @@ h3{
     padding: 0 2.5vw;
 }
 
-
 /*** Footer ***/
 footer{
-    position: fixed;
-    bottom: 0vh;
-    width: 100vw;
+    position: $header-footer_position;
+    bottom: $header-footer_position-value;
+    width: $header-footer_width;
     padding: $header-footer_padding;
     background-color: $header-backgroundcolor;
     box-shadow: $boxshadow-settings_footer $boxshadow-color;
-    opacity: .9;
+    opacity: $header-footer_opacity;
 }
-
-
-// .display-product_left .display-product_right{
-//     border: 1px solid red;
-//     width: 44vw;
-//     box-shadow: 0 5px 5px $header-backgroundcolor, 0 -5px 5px $header-backgroundcolor, 5px 0 5px $header-backgroundcolor, -5px 0 5px $header-backgroundcolor; 
-// }
-// .display-product_image-container{
-//     text-align: center;
-// }
-// .display-product_image{
-//     width: 44vw;
-//     box-shadow: 0 5px 5px $boxshadow-color, 0 -5px 5px $boxshadow-color, 5px 0 5px $boxshadow-color, -5px 0 5px $boxshadow-color;
-// }
-// .display-product_desc .display-product_pl{
-//     margin: 0 2vw;
-// }
