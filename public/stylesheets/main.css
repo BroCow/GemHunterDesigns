@@ -144,6 +144,11 @@ h3 {
   font-size: 0.75rem;
 }
 
+.product-price-length {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+}
+
 .product-price {
   padding: 0 2.5vw;
 }
