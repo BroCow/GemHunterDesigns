@@ -137,11 +137,14 @@ h3 {
 
 .product-desc {
   max-width: 45vw;
+  margin-bottom: 0;
 }
 
 .product-desc p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .product-price-length {
