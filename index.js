@@ -6,7 +6,7 @@ const app = express(); // exported as module for use elsewhere
 
 // const { body,validationResult } = require('express-validator');
 const path = require('path');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 //  Require routers
 const product = require('./routers/product');
@@ -38,6 +38,7 @@ app.use('/manage', manage);
 
 // Direct to home page
 app.get('/', (req, res) => res.render('pages/home'));
+
 
 // Get request to connect to Heroku database, select all from necklaces table, render results on /necklaces
 // app.get('/necklaces', async (req, res) => {
