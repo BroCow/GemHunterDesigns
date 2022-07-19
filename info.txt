@@ -1,0 +1,16 @@
+Heroku
+    Application = fast-bayou-70960
+    Database = postgresql-convex-69237
+
+    To Push Changes to Heroku
+    git push heroku main
+
+    To Access/Work with Database from Terminal:
+    heroku pg:psql
+
+GitHub
+    Repository = https://github.com/BroCow/GemHunterDesigns.git
+    
+    To Push Changes to GitHub
+    git push github main
+
