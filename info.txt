@@ -2,6 +2,9 @@ Heroku
     Application = fast-bayou-70960
     Database = postgresql-convex-69237
 
+    To Run App from Terminal
+    heroku open
+
     To Push Changes to Heroku
     git push heroku main
 

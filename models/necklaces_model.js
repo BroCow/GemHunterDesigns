@@ -24,6 +24,7 @@ function model_getAllNecklaces(callback){
             // console.log("Result variable is: " + result);
 
             callback(null, results);
+            return results;
         }
     })
 
