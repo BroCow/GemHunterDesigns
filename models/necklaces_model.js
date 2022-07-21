@@ -9,7 +9,7 @@ const pool = new Pool({connectionString: connectionString,
 }); 
 
 
-// View all necklaces
+// Get all necklaces from database
 function model_getAllNecklaces(callback){
     let sql = 'SELECT * FROM necklaces';
     pool.query(sql, function(err, db_result){
@@ -18,16 +18,11 @@ function model_getAllNecklaces(callback){
         } else {
             console.log("Back from database with: ");
             console.log(db_result);
-
-            const results = { 'results': (db_result) ? db_result.rows : null};
-            // let result = {necklaces:db_result.rows};
-            // console.log("Result variable is: " + result);
-
-            callback(null, results);
+            const results = { 'results': (db_result) ? db_result.rows : null};  
             
+            callback(null, results);
         }
     })
-
 }
 
 module.exports = {

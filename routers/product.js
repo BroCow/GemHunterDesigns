@@ -15,7 +15,7 @@ const pool = new Pool({connectionString: connectionString,
 });
 
 // Contact the controller to process database request
-router.get('/necklaces', necklacesController.control_getAllNecklaces);
+router.get('/necklaces', necklacesController.control_displayAllNecklaces);
 // Render results here????
 
 
