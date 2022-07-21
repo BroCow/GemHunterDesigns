@@ -19,7 +19,7 @@ router.get('/necklaces', necklacesController.control_displayAllNecklaces);
 
 // Show Bracelets page
 router.get('/bracelets', function(req, res){
-    res.send('View available bracelets here...');
+    res.render('pages/bracelets');
 });
 
 // Show Earrings page
