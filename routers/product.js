@@ -16,27 +16,6 @@ const pool = new Pool({connectionString: connectionString,
 
 // Contact the controller to process database request
 router.get('/necklaces', necklacesController.control_displayAllNecklaces);
-// Render results here????
-
-
-
-
-
-// router.get('/necklaces', async (req, res) => {
-//     try {
-//       const client = await pool.connect();
-//       const result = await client.query('SELECT * FROM necklaces');
-//       const results = { 'results': (result) ? result.rows : null};
-      
-//       res.render('pages/necklaces', results );
-//       client.release();
-//     } catch (err) {
-//       console.error(err);
-//       res.send("Error " + err);
-//     }
-//   })
-
-
 
 // Show Bracelets page
 router.get('/bracelets', function(req, res){
