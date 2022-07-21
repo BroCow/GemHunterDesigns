@@ -10,6 +10,7 @@ const productPaths_array = [braceletsLink, necklacesLink, earringsLink]
 
 for(i = 0, i < productLinks_array.length; i++;){
     productLinks_array[i].addEventListener('click', function(){
+        console.log(productPaths_array[i]);
         location.href = `/product/${productPaths_array[i]}`;
     })
 }
