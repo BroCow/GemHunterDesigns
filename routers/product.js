@@ -5,6 +5,7 @@ const router = express.Router();
 
 const necklacesController = require('../controllers/necklacesController');
 const braceletsController = require('../controllers/braceletsController');
+const earringsController = require('../controllers/earringsController');
 
 // Database connection
 const { Pool } = require('pg');
@@ -22,9 +23,7 @@ router.get('/necklaces', necklacesController.control_displayAllNecklaces);
 router.get('/bracelets', braceletsController.control_displayAllBracelets);
 
 // Show Earrings page
-router.get('/earrings', function(req, res){
-  res.render('pages/earrings');
-});
+router.get('/earrings', earringsController.control_displayAllEarrings);
 
 module.exports = router;
 

@@ -15,5 +15,24 @@
 
     <h2>Earrings page under construction</h2>
     
+    <div class="product-container flex flex-wrap flex-space-between">
+
+        <% results.forEach(function(r) { %>
+            <div class="product-displayed">
+                <div class="product-image_container flex flex-center">
+                    <img src="<%= r.image %>" alt="necklace" class="product-image">
+                </div>
+                <div class="product-desc">
+                    <p><%= r.description %></p>
+                </div>
+                <div class="product-price-length flex">
+                    <div class="product-price"><strong>&#36;<%= r.price %></strong></div>
+                    <span>-</span>
+                    <div class="product-length"><strong><%= r.length %>"</strong></div>
+                </div>
+            </div>
+        <% }); %>
+
+    </div>
 </body>
 </html>
