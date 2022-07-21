@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 const necklacesController = require('../controllers/necklacesController');
+const braceletsController = require('../controllers/braceletsController');
 
 // Database connection
 const { Pool } = require('pg');
@@ -18,9 +19,7 @@ const pool = new Pool({connectionString: connectionString,
 router.get('/necklaces', necklacesController.control_displayAllNecklaces);
 
 // Show Bracelets page
-router.get('/bracelets', function(req, res){
-    res.render('pages/bracelets');
-});
+router.get('/bracelets', braceletsController.control_displayAllBracelets);
 
 // Show Earrings page
 router.get('/earrings', function(req, res){
