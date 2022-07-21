@@ -24,7 +24,7 @@ router.get('/bracelets', function(req, res){
 
 // Show Earrings page
 router.get('/earrings', function(req, res){
-    res.send('View available earrings here...');
+  res.render('pages/earrings');
 });
 
 module.exports = router;
