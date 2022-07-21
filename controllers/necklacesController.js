@@ -21,10 +21,10 @@ function control_getAllNecklaces(req, res){
 }
 
 
-function displayNecklaces(req, res){
-    console.log("Displaying necklaces");
-    res.render('pages/necklaces', req);
-}
+// function displayNecklaces(req, res){
+//     console.log("Displaying necklaces");
+//     res.render('pages/necklaces', req);
+// }
 
 module.exports = {
     control_getAllNecklaces: control_getAllNecklaces
