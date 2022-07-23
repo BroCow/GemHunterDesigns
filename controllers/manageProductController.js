@@ -1,5 +1,5 @@
 
-const necklaces_model = require('../models/necklaces_model');
+//const necklaces_model = require('../models/necklaces_model');
 
 
 // Insert necklace
@@ -17,7 +17,6 @@ function control_insertNecklace(req, res){
 }
 
 module.exports = {
-    control_displayAllNecklaces: control_displayAllNecklaces,
     control_insertNecklace: control_insertNecklace
 }
 
