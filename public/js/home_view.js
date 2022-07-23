@@ -14,5 +14,9 @@ productLinks_array[2].addEventListener('click', function(){
     location.href = '/product/earrings';
 })
 
+productLinks_array[3].addEventListener('click', function(){
+    location.href = '/product/manageProduct';
+})
+
 
 
