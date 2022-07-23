@@ -11,18 +11,18 @@ function control_displayAllNecklaces(req, res){
 }
 
 
-// Insert necklace
-function control_insertNecklace(req, res){
-    console.log("Inserting necklace...");
+// // Insert necklace
+// function control_insertNecklace(req, res){
+//     console.log("Inserting necklace...");
 
-    //Get values from user input
+//     //Get values from user input
     
     
-    necklaces_model.model_insertNecklace();
-}
+//     necklaces_model.model_insertNecklace();
+// }
 
 module.exports = {
-    control_displayAllNecklaces: control_displayAllNecklaces,
-    control_insertNecklace: control_insertNecklace
+    control_displayAllNecklaces: control_displayAllNecklaces
+    //control_insertNecklace: control_insertNecklace
 }
 

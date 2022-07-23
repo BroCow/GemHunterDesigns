@@ -26,8 +26,8 @@ function model_getAllNecklaces(callback){
 }
 
 // Insert necklace into database
-function model_insertNecklace(description, length, price, image){
-    let sql = `INSERT INTO Necklaces (description, length, price, image) VALUES (${description}, ${length}, ${price}, '${image}')`;
+function model_insertNecklace(description, length, price){
+    let sql = `INSERT INTO Necklaces (description, length, price) VALUES (${description}, ${length}, ${price})`;
     pool.query(sql, function(err, db_result){
         if(err){
             throw err;

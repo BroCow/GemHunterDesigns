@@ -11,15 +11,19 @@ function control_insertNecklace(req, res){
     const price = req.query.price;
     const length = req.query.length;
 
-    res.send({
-        'description': description,
-        'price': price, 
-        'length': length
-    });
+    let necklaceDetails = {
+        description: description,
+        price: price, 
+        length: length
+    };
 
-    console.log(description, price, length);
+    necklaces_model.model_insertNecklace(necklaceDetails.description, necklaceDetails.price, necklaceDetails.length);
+        
+    res.end("Success");
+
+    //console.log(description, price, length);
     
-    // necklaces_model.model_insertNecklace();
+    
 }
 
 module.exports = {
