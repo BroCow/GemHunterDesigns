@@ -16,15 +16,15 @@ const productLinks_array = document.getElementsByClassName('home-info_item');
 // }
 
 productLinks_array[0].addEventListener('click', function(){
-    location.href = '/product/bracelets';
+    location.href = '/productRouter/bracelets';
 })
 
 productLinks_array[1].addEventListener('click', function(){
-    location.href = '/product/necklaces';
+    location.href = '/productRouter/necklaces';
 })
 
 productLinks_array[2].addEventListener('click', function(){
-    location.href = '/product/earrings';
+    location.href = '/productRouter/earrings';
 })
 
 
