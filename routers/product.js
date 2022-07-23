@@ -31,7 +31,18 @@ router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
 
 // Handle POST
 // router.post('/manageProduct/insertNecklace', (req, res) => res.send('Post received'));
-router.get('/manageProduct/insertNecklace', (req, res) => res.send('Get received'));
+router.get('/manageProduct/insertNecklace', function(req, res, next) {
+  // store all the user input data
+  const necklaceDetails=req.body;
+  console.log(necklaceDetails);
+ 
+  // insert user data into users table
+  var sql = 'INSERT INTO users SET ?';
+  pool.query(sql, necklaceDetails, function(err, data) {
+    if (err) throw err;
+    console.log("Necklace inserted");
+  });
+});
 
 module.exports = router;
 
