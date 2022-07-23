@@ -6,7 +6,7 @@ const router = express.Router();
 const necklacesController = require('../controllers/necklacesController');
 const braceletsController = require('../controllers/braceletsController');
 const earringsController = require('../controllers/earringsController');
-// const manageProductController = require('../controllers/manageProductController');
+const manageProductController = require('../controllers/manageProductController');
 
 // Database connection
 const { Pool } = require('pg');
@@ -31,18 +31,7 @@ router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
 
 // Handle POST
 // router.post('/manageProduct/insertNecklace', (req, res) => res.send('Post received'));
-router.get('/manageProduct/insertNecklace', function(req, res, next) {
-  // store all the user input data
-  const necklaceDetails=req.body;
-  console.log(necklaceDetails);
- 
-  // insert user data into users table
-  var sql = 'INSERT INTO users SET ?';
-  pool.query(sql, necklaceDetails, function(err, data) {
-    if (err) throw err;
-    console.log("Necklace inserted");
-  });
-});
+router.get('/manageProduct/insertNecklace', manageProductController.control_insertNecklace);
 
 module.exports = router;
 

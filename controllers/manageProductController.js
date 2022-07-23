@@ -2,23 +2,18 @@
 const necklaces_model = require('../models/necklaces_model');
 
 
-function control_displayAllNecklaces(req, res){
-    console.log("Getting all necklaces...");
-    
-    necklaces_model.model_getAllNecklaces(function(error, results){
-        res.render('pages/necklaces', results );
-    });
-}
-
-
 // Insert necklace
 function control_insertNecklace(req, res){
     console.log("Inserting necklace...");
 
-    //Get values from user input
+    //Get values from url
+    const description = req.query.description;
+    const price = req.query.price;
+    const length = req.query.length;
+
+    console.log(description, price, length);
     
-    
-    necklaces_model.model_insertNecklace();
+    // necklaces_model.model_insertNecklace();
 }
 
 module.exports = {
