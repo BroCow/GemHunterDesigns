@@ -12,10 +12,10 @@ const pool = new Pool({connectionString: connectionString,
   ssl: {
     rejectUnauthorized: false
   }
-});
+}); 
 
 // Manage Necklaces page
-router.get('/form', function(req, res, next){
+router.get('/manageProduct', function(req, res){
   res.render('manageProduct');
 });
 
