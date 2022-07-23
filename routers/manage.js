@@ -16,7 +16,7 @@ const pool = new Pool({connectionString: connectionString,
 
 // Manage Necklaces page
 router.get('/manageProduct', function(req, res){
-  res.render('manageProduct');
+  res.send('Welcome to manage page');
 });
 
 
