@@ -25,6 +25,27 @@ function model_getAllNecklaces(callback){
     })
 }
 
+// Insert necklace into database
+function model_insertNecklace(description, length, price, image){
+    let sql = `INSERT INTO Necklaces (description, length, price, image) VALUES (${description}, ${length}, ${price}, '${image}')`;
+    pool.query(sql, function(err, db_result){
+        if(err){
+            throw err;
+        } else {
+            console.log("1 necklace inserted");
+            console.log(db_result);
+            //const results = { 'results': (db_result) ? db_result.rows : null};  
+            
+            //callback(null, results); //Use controller to display result of inserted necklace to user
+        }
+    })
+}
+
+
+
+
+
 module.exports = {
-    model_getAllNecklaces: model_getAllNecklaces
+    model_getAllNecklaces: model_getAllNecklaces,
+    model_insertNecklace: model_insertNecklace
 };

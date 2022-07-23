@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="flex flex_space-between">
+        <h1>Add Items HTML Test Page</h1>
+    </header>
+    <div class="title-container">
+        <h1>GemHunter</h1>
+        <h3>DESIGNS</h3>
+    </div>
+
+    <form action="">
+        <label for="description" class="form-label">Product Description</label>
+        
+        <textarea name="description" class="form-control" id="description" cols="30" rows="10" placeholder="Enter a short description here..."></textarea>
+        
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" name="price">
+       
+        <label for="length" class="form-label">Length</label>
+        <input type="number" class="form-control" id="length" name="length">
+    </form>
+
+    <input type="submit" id="insertNecklace" class="btn btn-secondary" onclick="appPost_Necklace()" value="Submit">
+
+    <button onclick="insertData()">Test Function</button>
+
+
+    <footer>
+        
+    </footer>
+
+    <script src="/js/addItems.js"></script>
+</body>
+</html>
