@@ -1,14 +1,14 @@
 
-// const necklaces_model = require('../models/necklaces_model');
+const necklaces_model = require('../models/necklaces_model');
 
-// 
-// function control_displayAllNecklaces(req, res){
-//     console.log("Getting all necklaces...");
+
+function control_displayAllNecklaces(req, res){
+    console.log("Getting all necklaces...");
     
-//     necklaces_model.model_getAllNecklaces(function(error, results){
-//         res.render('pages/necklaces', results );
-//     });
-// }
+    necklaces_model.model_getAllNecklaces(function(error, results){
+        res.render('pages/necklaces', results );
+    });
+}
 
 
 // Insert necklace
