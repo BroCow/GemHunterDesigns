@@ -30,7 +30,7 @@ router.get('/earrings', earringsController.control_displayAllEarrings);
 router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
 
 // Handle POST
-router.get('/manageProduct/insertNecklace', (req, res) => res.send('Get received'));
+router.post('/manageProduct/insertNecklace', (req, res) => res.send('Post received'));
 
 module.exports = router;
 
