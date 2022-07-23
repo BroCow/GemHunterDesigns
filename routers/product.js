@@ -31,7 +31,7 @@ router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
 
 // Handle POST
 // router.post('/manageProduct/insertNecklace', (req, res) => res.send('Post received'));
-router.post('/manageProduct/insertNecklace', (req, res) => res.send('Post received'));
+router.get('/manageProduct/insertNecklace', (req, res) => res.send('Get received'));
 
 module.exports = router;
 
