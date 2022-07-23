@@ -31,8 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 // Use router modules
-app.use('/product', product);
-app.use('/manage', manage);
+app.use('/productRouter', product);
+app.use('/manageRouter', manage);
 
 
 
