@@ -27,10 +27,7 @@ router.get('/bracelets', braceletsController.control_displayAllBracelets);
 router.get('/earrings', earringsController.control_displayAllEarrings);
 
 // Show Manage Product page
-router.get('/manageProduct', function(req, res, next) {
-  const necklaceDetails = req.body;
-  console.log(necklaceDetails);
-});
+router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
 
 // Handle POST
 // router.post('/manageProduct/insertNecklace', (req, res) => res.send('Post received'));
