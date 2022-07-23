@@ -15,7 +15,7 @@ const pool = new Pool({connectionString: connectionString,
     rejectUnauthorized: false
   }
 });
-
+ 
 // Contact the controller to process database request
 router.get('/necklaces', necklacesController.control_displayAllNecklaces);
 

@@ -17,6 +17,7 @@ function control_insertNecklace(req, res){
 
     //Get values from user input
     
+    
     necklaces_model.model_insertNecklace();
 }
 

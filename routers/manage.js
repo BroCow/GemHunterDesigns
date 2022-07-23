@@ -15,10 +15,14 @@ const pool = new Pool({connectionString: connectionString,
 }); 
 
 // Manage Necklaces page
-
-
-
-router.post('/insertNecklace', necklacesController.control_insertNecklace);
+router.post('/insertNecklace', function(req, res, next) {
+  const necklaceDetails = req.body;
+  let sql = 'INSERT INTO users SET ?';
+  pool.query(sql, necklaceDetails, function (err, data) {
+    if(err) throw err;
+    console.log("Necklace added  successfully");
+  });
+})
 
 
 

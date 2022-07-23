@@ -43,6 +43,7 @@ app.get('/', (req, res) => res.render('pages/home'));
 app.get('/manage', (req, res) => res.render('pages/manageProduct'));
 
 
+
 // Get request to connect to Heroku database, select all from necklaces table, render results on /necklaces
 // app.get('/necklaces', async (req, res) => {
 //   try {
@@ -60,23 +61,24 @@ app.get('/manage', (req, res) => res.render('pages/manageProduct'));
 
 // Make it possible to navigate to addItems page in browser
 // app.get('/addItems', (req, res) => res.render('pages/addItems'));
-// Called by button on addItems page for necklaces
-app.get('/insertNecklace', async (req, res) => {
-  try {
-    const client = await pool.connect();
 
-    // const result = await client.query(`INSERT INTO necklaces (description, length, price) VALUES (${desc}, ${length}, ${price})`);
-    const result = await client.query("INSERT INTO necklaces (description, length, price) VALUES ('recover description', 1, 2)");
-    // const results = { 'results': (result) ? result.rows : null};
-    // console.log('Insert log');
-    // const response = 'Insert completed';
-    res.render('pages/itemAdded');
-    client.release();
-  } catch (err) {
-    console.error(err);
-    res.send("Error " + err);
-  }
-})
+// Called by button on addItems page for necklaces
+// app.get('/insertNecklace', async (req, res) => {
+//   try {
+//     const client = await pool.connect();
+
+//     // const result = await client.query(`INSERT INTO necklaces (description, length, price) VALUES (${desc}, ${length}, ${price})`);
+//     const result = await client.query("INSERT INTO necklaces (description, length, price) VALUES ('recover description', 1, 2)");
+//     // const results = { 'results': (result) ? result.rows : null};
+//     // console.log('Insert log');
+//     // const response = 'Insert completed';
+//     res.render('pages/itemAdded');
+//     client.release();
+//   } catch (err) {
+//     console.error(err);
+//     res.send("Error " + err);
+//   }
+// })
   
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
