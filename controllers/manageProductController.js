@@ -17,9 +17,22 @@ function control_insertNecklace(req, res){
         length: length
     };
 
-    necklaces_model.model_insertNecklace(necklaceDetails.description, necklaceDetails.price, necklaceDetails.length);
+    let sql = `INSERT INTO Necklaces (description, length, price) VALUES (${necklaceDetails.description}, ${necklaceDetails.length}, ${necklaceDetails.price})`;
+    pool.query(sql, function(err, db_result){
+        if(err){
+            throw err;
+        } else {
+            console.log("1 necklace inserted");
+            console.log(db_result);
+            //const results = { 'results': (db_result) ? db_result.rows : null};  
+            
+            //callback(null, results); //Use controller to display result of inserted necklace to user
+        }
+    })
+
+    //necklaces_model.model_insertNecklace(necklaceDetails.description, necklaceDetails.price, necklaceDetails.length);
         
-    res.end("Success");
+    //res.end("Success");
 
     //console.log(description, price, length);
     
