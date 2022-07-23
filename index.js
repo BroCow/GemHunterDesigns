@@ -39,6 +39,8 @@ app.use('/manage', manage);
 
 // Direct to home page
 app.get('/', (req, res) => res.render('pages/home'));
+// Direct to management page
+app.get('/manage', (req, res) => res.render('pages/manageProduct'));
 
 
 // Get request to connect to Heroku database, select all from necklaces table, render results on /necklaces
