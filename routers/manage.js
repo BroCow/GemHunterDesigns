@@ -15,23 +15,27 @@ const pool = new Pool({connectionString: connectionString,
 }); 
 
 // Manage Necklaces page
-router.get('/manage/insertNecklace', function(req, res, next) {
-  console.log("Router received request");
-  // const necklaceDetails = req.body;
-  // let sql = 'INSERT INTO users SET ?';
-  // pool.query(sql, necklaceDetails, function (err, data) {
-  //   if(err) throw err;
-  //   console.log("Necklace added  successfully");
-  // });
+router.post('insertNecklace', function(req, res, next) {
+  const necklaceDetails = req.body;
+  let sql = 'INSERT INTO necklaces SET ?';
+  pool.query(sql, necklaceDetails, function (err, data) {
+    if (err) throw err;
+    console.log("Necklace inserted");
+  })
 })
 
 
 
 
-
-
-
-
+// router.get('/manage/insertNecklace', function(req, res, next) {
+//   console.log("Router received request");
+//   // const necklaceDetails = req.body;
+//   // let sql = 'INSERT INTO users SET ?';
+//   // pool.query(sql, necklaceDetails, function (err, data) {
+//   //   if(err) throw err;
+//   //   console.log("Necklace added  successfully");
+//   // });
+// })
 
 module.exports = router;
 
