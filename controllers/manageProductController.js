@@ -26,7 +26,7 @@ function control_insertNecklace(req, res){
     }
     }); 
 
-    let sql = `INSERT INTO Necklaces (description, length, price) VALUES (${necklaceDetails.description}, ${necklaceDetails.length}, ${necklaceDetails.price})`;
+    let sql = `INSERT INTO necklaces (description, length, price) VALUES (${necklaceDetails.description}, ${necklaceDetails.length}, ${necklaceDetails.price})`;
     pool.query(sql, function(err, db_result){
         if(err){
             throw err;
