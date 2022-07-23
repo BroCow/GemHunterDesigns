@@ -15,13 +15,14 @@ const pool = new Pool({connectionString: connectionString,
 }); 
 
 // Manage Necklaces page
-router.get('/insertNecklace', function(req, res, next) {
-  const necklaceDetails = req.body;
-  let sql = 'INSERT INTO users SET ?';
-  pool.query(sql, necklaceDetails, function (err, data) {
-    if(err) throw err;
-    console.log("Necklace added  successfully");
-  });
+router.get('/manage/insertNecklace', function(req, res, next) {
+  console.log("Router received request");
+  // const necklaceDetails = req.body;
+  // let sql = 'INSERT INTO users SET ?';
+  // pool.query(sql, necklaceDetails, function (err, data) {
+  //   if(err) throw err;
+  //   console.log("Necklace added  successfully");
+  // });
 })
 
 
