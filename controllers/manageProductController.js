@@ -23,16 +23,16 @@ function control_insertNecklace(req, res){
             throw err;
         } else {
             console.log("1 necklace inserted");
-            console.log(db_result);
+            //console.log(db_result);
             //const results = { 'results': (db_result) ? db_result.rows : null};  
             
             //callback(null, results); //Use controller to display result of inserted necklace to user
         }
-    })
+    });
 
     //necklaces_model.model_insertNecklace(necklaceDetails.description, necklaceDetails.price, necklaceDetails.length);
         
-    res.end("Success");
+    res.end();
 
     //console.log(description, price, length);
     
