@@ -9,8 +9,8 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 //  Require routers
-const product = require('./routers/product');
-const manage = require('./routers/manage');
+const product = require('./routers/productRouter');
+const manage = require('./routers/manageRouter');
 
 
 // Database connection

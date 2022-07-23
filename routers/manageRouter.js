@@ -15,6 +15,11 @@ const pool = new Pool({connectionString: connectionString,
 });
 
 // Manage Necklaces page
+router.get('/form', function(req, res, next){
+  res.render('manageProduct');
+});
+
+
 router.post('/insertNecklace', necklacesController.control_insertNecklace);
 
 
