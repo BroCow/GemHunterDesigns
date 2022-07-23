@@ -1,11 +1,12 @@
 /** Router for views used for displaying product to customer **/
 
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); 
 
 const necklacesController = require('../controllers/necklacesController');
 const braceletsController = require('../controllers/braceletsController');
 const earringsController = require('../controllers/earringsController');
+const manageProductController = require('../controllers/manageProductController');
 
 // Database connection
 const { Pool } = require('pg');
@@ -24,6 +25,9 @@ router.get('/bracelets', braceletsController.control_displayAllBracelets);
 
 // Show Earrings page
 router.get('/earrings', earringsController.control_displayAllEarrings);
+
+// Show Manage Product page
+router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
 
 module.exports = router;
 
