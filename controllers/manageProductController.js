@@ -32,7 +32,7 @@ function control_insertNecklace(req, res){
 
     //necklaces_model.model_insertNecklace(necklaceDetails.description, necklaceDetails.price, necklaceDetails.length);
         
-    //res.end("Success");
+    res.end("Success");
 
     //console.log(description, price, length);
     
