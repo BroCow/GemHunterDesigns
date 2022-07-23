@@ -6,7 +6,7 @@ const router = express.Router();
 const necklacesController = require('../controllers/necklacesController');
 const braceletsController = require('../controllers/braceletsController');
 const earringsController = require('../controllers/earringsController');
-const manageProductController = require('../controllers/manageProductController');
+// const manageProductController = require('../controllers/manageProductController');
 
 // Database connection
 const { Pool } = require('pg');
@@ -27,7 +27,7 @@ router.get('/bracelets', braceletsController.control_displayAllBracelets);
 router.get('/earrings', earringsController.control_displayAllEarrings);
 
 // Show Manage Product page
-router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
+// router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
 
 module.exports = router;
 
