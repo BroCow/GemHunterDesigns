@@ -11,7 +11,11 @@ function control_insertNecklace(req, res){
     const price = req.query.price;
     const length = req.query.length;
 
-    res.send(description, price, length);
+    res.send({
+        'description': description,
+        'price': price, 
+        'length': length
+    });
 
     console.log(description, price, length);
     
