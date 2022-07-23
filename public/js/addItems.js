@@ -1,6 +1,6 @@
 console.log('js linked');
 
-const insertNecklaceSubmit = document.getElementById('insertNecklaceSubmit');
+const insertNecklaceSubmit = document.getElementById('addNecklace-link');
 
 insertNecklaceSubmit.addEventListener('click', function(){
     location.href = '/manage/insertNecklace';
