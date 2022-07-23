@@ -9,8 +9,8 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 //  Require routers
-const productRouter = require('./routers/productRouter');
-const manageRouter = require('./routers/manageRouter');
+const product = require('./routers/product');
+const manage = require('./routers/manage');
 
 
 // Database connection
@@ -30,9 +30,10 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+
 // Use router modules
-app.use('/productRouter', productRouter);
-app.use('/manageRouter', manageRouter);
+app.use('/product', product);
+app.use('/manage', manage);
 
 
 
