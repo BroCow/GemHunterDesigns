@@ -15,7 +15,7 @@ const pool = new Pool({connectionString: connectionString,
 }); 
 
 // Manage Necklaces page
-router.post('insertNecklace', function(req, res, next) {
+router.post('/insertNecklace', function(req, res, next) {
   const necklaceDetails = req.body;
   let sql = 'INSERT INTO necklaces SET ?';
   pool.query(sql, necklaceDetails, function (err, data) {
