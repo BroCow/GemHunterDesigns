@@ -25,44 +25,44 @@ function model_getAllNecklaces(callback){
     });
 }
 
-// // Get necklace from database by ID
-// function model_getNecklace(id, callback){
-//     //get necklace from DB that matches that id
+// Get necklace from database by ID
+function model_getNecklace(id, callback){
+    //get necklace from DB that matches that id
 
-//     //create a result to use with response
-//     let results = {id:id, description:"Beautiful", length:48, price:60}
+    //create a result to use with response
+    let results = {id:id, description:"Beautiful", length:48, price:60}
 
-//     callback(results);
-// }
+    callback(results);
+}
 
-// // Insert necklace into database
-// function model_insertNecklace(description, length, price, callback){
-//     //Add new necklace to DB with the provided details
+// Insert necklace into database
+function model_insertNecklace(description, length, price, callback){
+    //Add new necklace to DB with the provided details
 
-//     let results = {success:true};
+    let results = {success:true};
 
-//     callback(results);
+    callback(results);
 
-//     // let sql = `INSERT INTO Necklaces (description, length, price) VALUES (${description}, ${length}, ${price})`;
-//     // pool.query(sql, function(err, db_result){
-//     //     if(err){
-//     //         throw err;
-//     //     } else {
-//     //         console.log("1 necklace inserted");
-//     //         console.log(db_result);
-//     //         //const results = { 'results': (db_result) ? db_result.rows : null};  
+    // let sql = `INSERT INTO Necklaces (description, length, price) VALUES (${description}, ${length}, ${price})`;
+    // pool.query(sql, function(err, db_result){
+    //     if(err){
+    //         throw err;
+    //     } else {
+    //         console.log("1 necklace inserted");
+    //         console.log(db_result);
+    //         //const results = { 'results': (db_result) ? db_result.rows : null};  
             
-//     //         //callback(null, results); //Use controller to display result of inserted necklace to user
-//     //     }
-//     // })
-// }
+    //         //callback(null, results); //Use controller to display result of inserted necklace to user
+    //     }
+    // })
+}
 
 
 
 
 
 module.exports = {
-    model_getAllNecklaces: model_getAllNecklaces
-    // model_getNecklace: model_getNecklace,
-    // model_insertNecklace: model_insertNecklace
+    model_getAllNecklaces: model_getAllNecklaces,
+    model_getNecklace: model_getNecklace,
+    model_insertNecklace: model_insertNecklace
 };
