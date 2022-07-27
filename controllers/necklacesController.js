@@ -6,7 +6,7 @@ function control_getAllNecklaces(req, res){
     console.log("Contacting database to get all necklaces...");
     
     necklaces_model.model_getAllNecklaces(function(error, results){
-        res.render('pages/necklaces', results );
+        res.render('pages/huntGems', results );
     });
 }
 
