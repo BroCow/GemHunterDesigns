@@ -8,7 +8,7 @@ const pool = new Pool({connectionString: connectionString,
   }
 }); 
 
-
+ 
 // Get all bracelets from database
 function model_getAllBracelets(callback){
     let sql = 'SELECT * FROM bracelets';
@@ -25,6 +25,40 @@ function model_getAllBracelets(callback){
     })
 }
 
+// Get bracelet from database by ID
+function model_getBracelet(id, callback){
+    //get bracelet from DB that matches that id
+
+    //create a result to use with response
+    let results = {id:id, description:"Dazzling", length:8, price:40}
+
+    callback(results);
+}
+
+// Insert bracelet into database
+function model_insertBracelet(description, length, price, callback){
+    //Add new bracelet to DB with the provided details
+
+    let results = {success:true};
+
+    callback(results);
+
+    // let sql = `INSERT INTO Necklaces (description, length, price) VALUES (${description}, ${length}, ${price})`;
+    // pool.query(sql, function(err, db_result){
+    //     if(err){
+    //         throw err;
+    //     } else {
+    //         console.log("1 necklace inserted");
+    //         console.log(db_result);
+    //         //const results = { 'results': (db_result) ? db_result.rows : null};  
+            
+    //         //callback(null, results); //Use controller to display result of inserted necklace to user
+    //     }
+    // })
+}
+
 module.exports = {
-    model_getAllBracelets: model_getAllBracelets
+    model_getAllBracelets: model_getAllBracelets,
+    model_getBracelet,
+    model_insertBracelet
 };

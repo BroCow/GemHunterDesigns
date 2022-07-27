@@ -17,17 +17,30 @@ const pool = new Pool({connectionString: connectionString,
   }
 });
  
-// Contact the controller to process database request
-router.get('/necklaces', necklacesController.control_displayAllNecklaces);
+/*** NECKLACES ROUTES ***/
+router.get('/necklaces', necklacesController.control_getAllNecklaces);
+router.get('/necklace', necklacesController.control_getNecklace);
+// For management page
+router.post('/necklace', necklacesController.control_postNecklace);
 
-// Show Bracelets page
+/*** BRACELETS ROUTES ***/
 router.get('/bracelets', braceletsController.control_displayAllBracelets);
+router.get('/bracelet', braceletsController.control_getBracelet);
+// For management page
+router.post('/bracelet', braceletsController.control_postBracelet);
 
-// Show Earrings page
+/*** EARRINGS ROUTES ***/
 router.get('/earrings', earringsController.control_displayAllEarrings);
+router.get('/earring', earringsController.control_getEarring);
+// For management page
+router.post('/earrings', earringsController.control_postEarring);
+
+
 
 // Show Manage Product page
 router.get('/manageProduct', (req, res) => res.render('pages/manageProduct'));
+
+
 
 // Handle POST
 // router.post('/manageProduct/insertNecklace', (req, res) => res.send('Post received'));
