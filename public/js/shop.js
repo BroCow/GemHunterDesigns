@@ -5,8 +5,8 @@ function shopNecklaces(){
     let shop = $("#shopButton").val();
     console.log(shop);
 
-    location.href = '/product/necklaces';
-    // $.get("/necklaces", function(){
-    //     console.log("Server contacted.");
-    // });
+    //location.href = '/product/necklaces';
+    $.get("/product/necklaces", function(){
+        console.log("Server contacted.");
+    });
 }
