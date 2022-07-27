@@ -42,7 +42,8 @@ app.get('/', (req, res) => res.render('pages/home'));
 // Direct to management page
 // app.get('/manage', (req, res) => res.render('pages/manageProduct'));
 
-
+const necklacesController = require('./controllers/necklacesController');
+router.get('/necklaces', necklacesController.control_getAllNecklaces);
 
 // Get request to connect to Heroku database, select all from necklaces table, render results on /necklaces
 // app.get('/necklaces', async (req, res) => {

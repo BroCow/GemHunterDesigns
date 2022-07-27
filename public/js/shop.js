@@ -6,7 +6,7 @@ function shopNecklaces(){
     console.log(shop);
 
     //location.href = '/product/necklaces';
-    $.get("/product/necklaces", function(){
+    $.get("/necklaces", function(){
         console.log("Server contacted.");
     });
 }
