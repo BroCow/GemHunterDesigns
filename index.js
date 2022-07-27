@@ -42,6 +42,7 @@ app.get('/', (req, res) => res.render('pages/home'));
 // Direct to management page
 // app.get('/manage', (req, res) => res.render('pages/manageProduct'));
 
+const router = express.Router(); 
 const necklacesController = require('./controllers/necklacesController');
 router.get('/necklaces', necklacesController.control_getAllNecklaces);
 
