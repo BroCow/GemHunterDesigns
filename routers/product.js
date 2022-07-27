@@ -19,9 +19,9 @@ const pool = new Pool({connectionString: connectionString,
  
 /*** NECKLACES ROUTES ***/
 router.get('/necklaces', necklacesController.control_getAllNecklaces);
-router.get('/necklace', necklacesController.control_getNecklace);
+//router.get('/necklace', necklacesController.control_getNecklace);
 // For management page
-router.post('/necklace', necklacesController.control_postNecklace);
+//router.post('/necklace', necklacesController.control_postNecklace);
 
 /*** BRACELETS ROUTES ***/
 router.get('/bracelets', braceletsController.control_displayAllBracelets);

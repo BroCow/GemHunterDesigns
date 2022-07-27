@@ -10,40 +10,40 @@ function control_getAllNecklaces(req, res){
     });
 }
 
-// GET SINGLE NECKLACE FROM DATABASE
-function control_getNecklace (req, res) {
+// // GET SINGLE NECKLACE FROM DATABASE
+// function control_getNecklace (req, res) {
 
-    let id = req.params.id;
+//     let id = req.params.id;
  
-    console.log("Contacting database to get necklace with id " + id);
+//     console.log("Contacting database to get necklace with id " + id);
 
-    //get returned results from DB model
-    necklaces_model.model_getNecklace(id, function(results){
-        //respond with returning JSON data
-        res.json(results);
-    });
-};
+//     //get returned results from DB model
+//     necklaces_model.model_getNecklace(id, function(results){
+//         //respond with returning JSON data
+//         res.json(results);
+//     });
+// };
 
 
-// ADD NECKLACE TO DATABASE
-function control_postNecklace (req, res) {
-    //Get data from body of html
-    let description = req.body.description;
-    let length = req.body.length;
-    let price = req.body.price;
+// // ADD NECKLACE TO DATABASE
+// function control_postNecklace (req, res) {
+//     //Get data from body of html
+//     let description = req.body.description;
+//     let length = req.body.length;
+//     let price = req.body.price;
 
-    console.log("Adding new necklace with details: " + description + " " + length + " " + price);
+//     console.log("Adding new necklace with details: " + description + " " + length + " " + price);
 
-    necklaces_model.model_insertNecklace(description, length, price, function(results){
-        res.json(results);
-    });
-};
+//     necklaces_model.model_insertNecklace(description, length, price, function(results){
+//         res.json(results);
+//     });
+// };
 
 
 
 module.exports = {
-    control_getAllNecklaces: control_getAllNecklaces,
-    control_getNecklace: control_getNecklace,
-    control_postNecklace: control_postNecklace
+    control_getAllNecklaces: control_getAllNecklaces
+    // control_getNecklace: control_getNecklace,
+    // control_postNecklace: control_postNecklace
 }
 
