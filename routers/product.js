@@ -17,6 +17,10 @@ const pool = new Pool({connectionString: connectionString,
   }
 });
  
+router.get('/huntGems', function(req, res){
+  res.render('pages/huntGems');
+});
+
 /*** NECKLACES ROUTES ***/
 router.get('/necklaces', necklacesController.control_getAllNecklaces);
 //router.get('/necklace', necklacesController.control_getNecklace);
