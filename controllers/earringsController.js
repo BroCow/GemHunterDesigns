@@ -7,7 +7,7 @@ function control_displayAllEarrings(req, res){
     console.log("Contacting database to get all earrings...");
     
     earrings_model.model_getAllEarrings(function(error, results){
-        res.render('pages/earrings', results );
+        res.json(results );
     });
 }
 

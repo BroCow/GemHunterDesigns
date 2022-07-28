@@ -6,7 +6,7 @@ function control_displayAllBracelets(req, res){
     console.log("Contacting database to get all bracelets...");
     
     bracelets_model.model_getAllBracelets(function(error, results){
-        res.render('pages/bracelets', results );
+        res.json(results );
     });
 }
  
