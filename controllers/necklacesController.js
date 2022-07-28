@@ -1,12 +1,13 @@
 
 const necklaces_model = require('../models/necklaces_model');
-
+ 
 // Display list of all necklaces.
 function control_getAllNecklaces(req, res){
     console.log("Contacting database to get all necklaces...");
     
     necklaces_model.model_getAllNecklaces(function(error, results){
-        res.render('pages/huntGems', results );
+        //res.render('pages/huntGems', results );
+        res.json(results);
     });
 }
 
