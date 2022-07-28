@@ -10,6 +10,10 @@ productLinks_array[0].addEventListener('click', function(){
 productLinks_array[1].addEventListener('click', function(){
     //location.href = '/product/necklaces';
     console.log("Shop necklaces requested");
+    $.get("/product/necklaces", function(data){
+        console.log("Back from server with:");
+        console.log(data);
+    });
 })
 
 productLinks_array[2].addEventListener('click', function(){
